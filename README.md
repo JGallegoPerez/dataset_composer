@@ -25,14 +25,23 @@ Class *DataSet* takes primitive objects as arguments. It composes and saves a da
 (I will describe only the functions whose purpose are not obvious from the name)
 
 *get_ts_array()*
+
 *get_shape()*
+
 *get_number_of_joints()*
+
 *get_number_of_timesteps()*
+
 *get_one_joint(index)*
+
 *plot_joints(*args)*: Very useful to make sure that the process is going well. All joints, or just a few specified ones, can be plotted.
+
 *downsampling(new_ts)*
+
 *add_joints(extra_joints)*
+
 *add_timesteps(extra_ts)*
+
 
 ### From **Primitive**
 
@@ -41,15 +50,21 @@ Class *DataSet* takes primitive objects as arguments. It composes and saves a da
 ### From **Customized**
 
 *get_array()*
+
 *create_pause(ts)*: Repeats a still position many times, thus creating a "pause" trajectory.
+
 *pos_interpolate(pos1, pos2, ts)*: Given two still positions, it creates a trajectory of length "ts" between the two positions. The interpolated points are equidistant from each other.
 
 ### From **DataSet**
 
 *seq_composer(num_cycles, *prob_repeat)*: Creates a single sequence composed by "num_cycles" cycles, with potentially different probabilities of appearance for each primitive. 
+
 *traj_interpolate(arr2d, cycle_length, interp_ts, joints_lst)*: Optional. Only after a sequence has been made with seq_composer. It interpolates "ts" timesteps at the beginning of each cycle
+
 *dataset_composer(num_seq, num_cycles, interpolate, *prob_repeat)*: Returns a 3D array, consisting in the dataset, with shape: "num_seq" x "seq_len" x "num_joints". With "interpolate" set to True, it will apply interpolation at the beginning of specified joint sequences.
+
 *dataset_plot(seq_index, *joints)*: Once a dataset already exists, it allows us to plot just one specific sequence (or a few joints from it). 
+
 *save_as_npy(path_traj)*
 
 The demonstration in demo.py will greatly help understand the workflow. 
