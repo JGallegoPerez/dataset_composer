@@ -22,7 +22,7 @@ Class **DataSet** takes primitive objects as arguments. It composes and saves a 
 ## Tools/functions of Data Composer
 
 ### From **TimeSequence** (thus, inherited by all classes)
-(I will describe only the functions whose purpose are not obvious from the name)
+(I will describe only the functions whose purpose is not obvious from the name)
 
 *get_ts_array()*
 
