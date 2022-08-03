@@ -19,7 +19,7 @@ Objects from class **Customized** take Primitive objects as arguments. They are 
 
 Class **DataSet** takes primitive objects as arguments. It composes and saves a dataset.  
 
-## Tools/functions of Data Composer
+## Tools/functions of Dataset Composer
 
 ### From **TimeSequence** (thus, inherited by all classes)
 (I will describe only the functions whose purpose is not obvious from the name)
