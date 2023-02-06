@@ -23,8 +23,8 @@
 
 from main import *
 
-path_touch = 'venv/dataset_demo/touch_left.npy'
-path_lift = 'venv/dataset_demo/lift_right.npy'
+path_touch = 'dataset_demo/touch_left.npy'
+path_lift = 'dataset_demo/lift_right.npy'
 
 #Two Primitive objects are created
 prim_touch = Primitive(path_touch)
@@ -41,10 +41,10 @@ prim_lift = Primitive(path_lift)
 # # Notice that we find 400 timesteps in touch primitive and 600 timesteps in lift primitive
 
 # Make head trajectories for each primitive. (Thus far, we only have head "positions").
-head_left_pos = io.npy_to_array("venv/dataset_demo/head_left.npy")
+head_left_pos = io.npy_to_array("dataset_demo/head_left.npy")
 head_left_traj = Customized(head_left_pos)
 head_left_traj.create_pause(prim_touch.get_number_of_timesteps()) #Now, its "ts_array" is a pause trajectory of head angles
-head_right_pos = io.npy_to_array("venv/dataset_demo/head_right.npy")
+head_right_pos = io.npy_to_array("dataset_demo/head_right.npy")
 head_right_traj = Customized(head_right_pos)
 head_right_traj.create_pause(prim_lift.get_number_of_timesteps())
 
